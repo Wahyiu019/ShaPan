@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-orange-50: #fff7ed;
+  --color-orange-100: #ffedd5;
+  --color-orange-500: #f97316;
+  --color-orange-600: #ea580c;
+  --color-blue-dark: #2B3A55;
+  --color-blue-primary: #2F80ED;
+  --color-blue-light: #EAF4FF;
+  --color-cyan-primary: #35C6C3;
+  --color-purple-primary: #8B7CF6;
+  --color-red-primary: #F05A5A;
+  --color-yellow-light: #FFE7A3;
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-md border border-white/60 shadow-[0_4px_20px_rgba(0,0,0,0.03)] rounded-2xl;
+  }
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-xl border border-white/50 rounded-[24px];
+  }
+  .bg-blue-gradient {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2F80ED 100%);
+  }
+  .bg-grid-pattern {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+
